@@ -1,0 +1,5 @@
+{% include '_header.html.twig' %}
+    {% for homePage in homePage | slice (0,3) %}
+        {% include '_article.html.twig' %}
+    {% endfor%}
+{% include '_footer.html.twig' %}

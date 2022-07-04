@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    padding: 0px 100px;
+    background-color: goldenrod;
+}
+
+nav ul{
+    float: top;
+}
+
+nav li{
+    display: inline-block;
+    list-style: none;
+}
+
+header ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding:0px 20px;
+
+}
+
+header ul li a:hover{
+    color: black;
+}
+
+footer {
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    padding: 0px 100px;
+    background-color: goldenrod;
+}
+
+.block {
+    border: 2px solid goldenrod;
+    margin: 10px;
+}
+
+section a {
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+    background-color: goldenrod;
+    margin-left: 20%;
+    margin-top: -70px;
+    padding: 5px;
+    position: absolute;
+    position: center;
+}
+
+section a:hover {
+    background-color: white;
+    color: goldenrod;
+}

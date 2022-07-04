@@ -1,0 +1,11 @@
+<div class="block">
+        {% if homePage.isPublished %}
+                <h1>{{ homePage.title }}</h1>
+                <p>{{ homePage.description }}</p>
+                <p>{{ homePage.publishedAt|date ('d-m-y') }}</p>
+                <img src="{{ homePage.image }}" alt="home" height="200rem">
+                <h4>{{ homePage.author }}</h4>
+        {% else %}
+            <p>Article not found</p>
+        {% endif %}
+</div>
