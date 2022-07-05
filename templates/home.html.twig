@@ -1,5 +1,8 @@
 {% include '_header.html.twig' %}
+<div id="articles">
     {% for homePage in homePage | slice (0,3) %}
         {% include '_article.html.twig' %}
     {% endfor%}
+</div>
+<br>
 {% include '_footer.html.twig' %}

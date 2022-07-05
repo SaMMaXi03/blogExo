@@ -1,10 +1,14 @@
 <div class="block">
         {% if homePage.isPublished %}
                 <h1>{{ homePage.title }}</h1>
+            <br>
                 <p>{{ homePage.description }}</p>
                 <p>{{ homePage.publishedAt|date ('d-m-y') }}</p>
-                <img src="{{ homePage.image }}" alt="home" height="200rem">
+            <br>
+                <img src="{{ homePage.image }}" alt="home">
                 <h4>{{ homePage.author }}</h4>
+            <br>
+                <a class="btn" style="color: black; text-decoration: none;" href={{ path('list', {'id': homePage.id }) }}> En savoir + </a>
         {% else %}
             <p>Article not found</p>
         {% endif %}

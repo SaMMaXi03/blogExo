@@ -1,12 +1,10 @@
 {% include '_header.html.twig' %}
-
-<h1>Articles de film</h1>
-<section>
-    <div  id="articles">
+<br>
+<h1 class="film">Articles de film</h1>
+    <div id="articles">
         {% for homePage in homePage %}
             {% include '_article.html.twig' %}
-            <a href={{ path ('list', {'id':homePage.id}) }}>En savoir +</a>
         {% endfor %}
     </div>
-</section>
+<br>
 {% include '_footer.html.twig' %}
