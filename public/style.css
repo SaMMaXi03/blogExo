@@ -91,6 +91,11 @@ section {
     text-align: center;
 }
 
+label {
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
 #articles {
     display: flex;
     align-items: center;

@@ -1,7 +1,13 @@
 {% extends 'base.html.twig' %}
+{% block title %}
+    <title> List of article </title>
+{% endblock %}
 {% block main %}
 <div id="articles">
     {% include '_article.html.twig' %}
 </div>
 <br>
 {% endblock %}
+    {% block footer %}
+        <p>Blog</p>
+    {% endblock %}
