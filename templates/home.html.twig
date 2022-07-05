@@ -1,8 +1,18 @@
-{% include '_header.html.twig' %}
+{% extends 'base.html.twig' %}
+
+{% block main %}
+<br>
+<section>
+    <form action="{{ path('home') }}" method="get">
+        <label for="age">A hold are you ?</label>
+        <input type="text" name="age">
+    </form>
+</section>
+
 <div id="articles">
     {% for homePage in homePage | slice (0,3) %}
         {% include '_article.html.twig' %}
     {% endfor%}
 </div>
 <br>
-{% include '_footer.html.twig' %}
+{% endblock %}

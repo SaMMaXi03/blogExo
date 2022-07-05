@@ -4,13 +4,14 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 class mainController extends AbstractController
 {
     /**
      * @Route("/",name="home");
      */
-    public function character()
+    public function character(Request $request)
     {
         $articles = [
             1 => [
@@ -50,10 +51,13 @@ class mainController extends AbstractController
                 'id' => 4
             ]
         ];
-
-        return $this->render('home.html.twig',[
-            'homePage' => $articles
-        ]);
+        if(($request->query->has('age'))&& ($request->query->get('age')< 18)){
+            return $this->render("kick.html.twig");
+        }else {
+            return $this->render('home.html.twig', [
+                'homePage' => $articles
+            ]);
+        }
     }
 
     /**

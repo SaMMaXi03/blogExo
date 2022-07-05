@@ -1,4 +1,5 @@
-{% include '_header.html.twig' %}
+{% extends 'base.html.twig' %}
+{% block main %}
 <br>
 <h1 class="film">Articles de film</h1>
     <div id="articles">
@@ -7,4 +8,4 @@
         {% endfor %}
     </div>
 <br>
-{% include '_footer.html.twig' %}
+{% endblock%}
