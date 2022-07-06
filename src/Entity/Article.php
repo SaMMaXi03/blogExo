@@ -25,7 +25,7 @@ class Article
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $image;
+    private $content;
 
     /**
      * @ORM\Column(type="boolean")
@@ -54,14 +54,14 @@ class Article
         return $this;
     }
 
-    public function getImage(): ?string
+    public function getContent(): ?string
     {
-        return $this->image;
+        return $this->content;
     }
 
-    public function setImage(string $image): self
+    public function setContent(string $content): self
     {
-        $this->image = $image;
+        $this->content = $content;
 
         return $this;
     }
